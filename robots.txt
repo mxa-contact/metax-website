@@ -1,13 +1,30 @@
+# MetaX.Academy — robots policy
 User-agent: *
 Allow: /
+# Internal harnesses and authoring sources — not content pages.
+Disallow: /_nav.html
+Disallow: /_nav
+Disallow: /_refs/
+Disallow: /tools/
+# Keep rendered assets crawlable (Google renders JS/CSS to index the page).
+Allow: /js/
+Allow: /css/
+Allow: /content/
+Allow: /data/
 
 # AI answer-engine crawlers (operator decision: allow for citation share)
 User-agent: GPTBot
 Allow: /
+Disallow: /_refs/
+Disallow: /tools/
 User-agent: ClaudeBot
 Allow: /
+Disallow: /_refs/
+Disallow: /tools/
 User-agent: PerplexityBot
 Allow: /
+Disallow: /_refs/
+Disallow: /tools/
 User-agent: Google-Extended
 Allow: /
 

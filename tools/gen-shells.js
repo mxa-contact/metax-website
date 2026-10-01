@@ -4,6 +4,7 @@
    and md-page.js never runs, so the page cannot show its "being written" state.
    Never overwrites an existing shell. Writes NO content — prose comes only
    from /content/**.md.
+   Afterwards runs tools/seo-head.js (Google tag, SEO meta, sitemap.xml).
    Usage: node tools/gen-shells.js [--dry]                                     */
 "use strict";
 const fs = require("fs"), path = require("path");
@@ -56,3 +57,5 @@ rows.filter((r) => !r.ext && !r.hasShell).forEach((r) => {
   fs.writeFileSync(out, html);
 });
 console.log((dry ? "would generate " : "generated ") + n + " shells");
+/* Every page must carry the Google tag + the managed SEO <head> block. */
+if (!dry && n) require("./seo-head.js").run();

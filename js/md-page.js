@@ -154,6 +154,9 @@
   }
 
   function jsonld(fm) {
+    /* tools/seo-head.js already ships a static WebPage/Article node for this URL. */
+    var st = document.querySelector("script[data-mx-seo]");
+    if (st && st.textContent.indexOf("#webpage") !== -1) return;
     var type = fm.jsonld || "WebPage";
     var o = { "@context": "https://schema.org", "@type": type, name: fm.title || document.title,
       description: fm.deck || "", url: "https://metax.academy" + location.pathname };

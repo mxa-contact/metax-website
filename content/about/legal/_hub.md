@@ -21,7 +21,7 @@ Legal & Contact is the group that holds the estate's legal and contact pages —
 
 ## Why the legal surface is written to be read
 
-A privacy policy no one reads is a privacy policy that hides. The estate's legal pages are written against that: the privacy page states exactly what is collected (very little, and no third-party analytics), the advertising policy discloses the ad slots that keep the estate's own harm statement unremedied, and the cookies page states plainly that the estate uses local storage for session state and nothing more. The honesty is not decorative — under the License's relational stratum, a term a person cannot understand is a term they cannot consent to.
+A privacy policy no one reads is a privacy policy that hides. The estate's legal pages are written against that: the privacy page states exactly what is collected (very little: aggregate traffic measured by one Google Analytics 4 tag, and nothing sold), the advertising policy discloses the ad slots that keep the estate's own harm statement unremedied, and the cookies page states plainly that the estate uses local storage for session state plus the Google Analytics cookies the privacy page names. The honesty is not decorative — under the License's relational stratum, a term a person cannot understand is a term they cannot consent to.
 
 ## The map — what lives in this group
 
@@ -29,7 +29,7 @@ A privacy policy no one reads is a privacy policy that hides. The estate's legal
 
 ## The worked instance — the advertising policy
 
-The advertising policy is the group's most consequential page, because it is where the estate's money model meets its own License. It discloses that the content plane carries AdSense and Adsterra slots, states that no behavioural profiling or third-party analytics run alongside them, and links directly to the estate's Part H Statement, where HX-01 (attention expropriation) and HX-04 (the human as product) are marked unremedied because of exactly these slots. The policy does not defend the slots as harmless; it names them as the reason the estate fails two of its own absolutes, and states that removing them is the available remedy.
+The advertising policy is the group's most consequential page, because it is where the estate's money model meets its own License. It discloses that the content plane carries AdSense and Adsterra slots, states that no behavioural profiling of learners runs alongside them, names the one analytics tag (Google Analytics 4) that does, and links directly to the estate's Part H Statement, where HX-01 (attention expropriation) and HX-04 (the human as product) are marked unremedied because of exactly these slots. The policy does not defend the slots as harmless; it names them as the reason the estate fails two of its own absolutes, and states that removing them is the available remedy.
 
 ## Limits of this group
 
