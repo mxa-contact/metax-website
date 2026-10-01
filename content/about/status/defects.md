@@ -35,6 +35,7 @@ Each defect carries an identifier (DEF-YYYY-nnn), a severity, a one-line descrip
 | DEF-2026-056 | minor | Part H cites author-year without a full bibliography, contrary to the checkable-evidence criterion. | open — must be closed by a human with the sources; a machine-generated reference list would commit HX-03 |
 | DEF-2026-060 | minor | Social-only sign-in excludes the Arabic-market audience worse than the English one. | open — filed as both HX-13 and HX-25; disclosed in the estate's Part H Statement |
 | DEF-2026-061 | major | Content plane carries advertising slots, keeping HX-01 and HX-04 unremedied in the estate's own statement. | open — remedy available (remove the slots); site is a demo |
+| DEF-2026-062 | minor | Every page now loads Google Analytics 4 (G-CW83DL65QB). The estate previously stated it carried no third-party analytics; HX-05 minimisation is narrowed rather than structurally discharged. | open — disclosed on the privacy page, the advertising policy, the demo notice and the estate's Part H Statement; remedy available (remove the tag, or gate it behind consent) |
 
 # The worked instance — the defect that cannot be closed by a machine
 

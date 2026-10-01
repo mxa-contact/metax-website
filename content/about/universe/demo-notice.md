@@ -30,7 +30,7 @@ Other parts are placeholder-grade and must not be trusted as finished. **Prose m
 
 # What is deliberately absent
 
-A third category is not missing by accident but excluded by principle. There is **no behavioural advertising and no third-party analytics** anywhere in the estate, which makes profiling of any learner structurally impossible rather than merely prohibited. There is **no companion surface** and none planned, which is why the synthetic-relation harm is inapplicable to the estate. There are **no uploaded images**, only shimmer placeholders and glyphs, which removes the surface through which most child-safety harm arrives. And there is **no live payment or entitlement** on the demo — the access pages describe an intended model, not an active one.
+A third category is not missing by accident but excluded by principle. There is **no behavioural advertising** anywhere in the estate and it stores no learner behavioural data of its own. It does carry **one third-party analytics tag, Google Analytics 4**, which measures aggregate page traffic; it is disclosed on the privacy page, so profiling of learners is prohibited and minimised rather than structurally impossible. There is **no companion surface** and none planned, which is why the synthetic-relation harm is inapplicable to the estate. There are **no uploaded images**, only shimmer placeholders and glyphs, which removes the surface through which most child-safety harm arrives. And there is **no live payment or entitlement** on the demo — the access pages describe an intended model, not an active one.
 
 # The worked instance — how to read a single page
 

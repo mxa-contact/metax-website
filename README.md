@@ -166,3 +166,26 @@ See `SITE_MAP.md` (§4 navigation, full route tree) and `CONTENT_GAPS.md`.
 - Tools: `tools/route-inventory.js`, `pages-server.js` (a Pages-faithful local
   server), `nav-audit.js` (Playwright), `gen-shells.js`, `gen-site-map.js` and
   `gen-content-gaps.js`.
+
+---
+
+## 10. Changelog — 2026-10-01 · Google tag, SEO head, sitemap
+
+- **Google tag** (`G-CW83DL65QB`) on all 351 pages, once, directly after `<head>`.
+  Conflicts with MX-003 and how they are resolved: `ANALYTICS_DETERMINATION.md`
+  (draft for the Curator) · defect **DEF-2026-062**.
+- **`tools/seo-head.js`** (idempotent) owns every page's `<!-- SEO:start … SEO:end -->`
+  block: title, ≤160-char description, robots, canonical (the served URL, so no
+  redirect hop), hreflang en + x-default (`ar` is added automatically once `/ar/`
+  exists), full Open Graph + `og:image` dimensions/alt, `article:*`, Twitter card,
+  icons, manifest and a JSON-LD `@graph` (EducationalOrganization, WebSite,
+  WebPage/CollectionPage/Article/AboutPage, BreadcrumbList).
+  **Run `node tools/seo-head.js` after adding or editing any page or `content/*.md`**;
+  `gen-shells.js` runs it automatically.
+- **`sitemap.xml`** is generated from the same index/noindex decision: every
+  indexable page plus news articles and curriculum detail URLs (139). Generated
+  "being written" shells stay `noindex` and enter the sitemap on the run after their
+  Markdown lands.
+- New assets: `favicon.ico/.svg`, `apple-touch-icon.png`, `img/icon-192/512.png`,
+  `img/og-image.jpg` (1200×630, `tools/gen-brand-assets.py`), `site.webmanifest`.
+- `robots.txt` disallows `/_refs/`, `/tools/` and the `_nav` harness.

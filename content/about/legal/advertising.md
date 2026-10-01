@@ -22,7 +22,7 @@ This is the page where the estate's funding model collides with the License it a
 
 # What the estate does and does not do with advertising
 
-The estate carries advertising slots on its content plane, served by AdSense and Adsterra. It does **not** run behavioural profiling of learners, does **not** carry third-party analytics, does **not** sell or share learner data, does **not** optimise session duration, and does **not** place interstitials, countdown timers, or any of the dark patterns its commerce standard forbids. The advertising is a below-the-content revenue source on a demo, not a behavioural-targeting apparatus. That narrows the exposure — but it does not remove it, and the estate refuses to claim it does.
+The estate carries advertising slots on its content plane, served by AdSense and Adsterra. It carries exactly one third-party analytics tag — Google Analytics 4, used for aggregate traffic measurement and disclosed on the privacy page. It does **not** run behavioural profiling of learners, does **not** sell or share learner data, does **not** optimise session duration, and does **not** place interstitials, countdown timers, or any of the dark patterns its commerce standard forbids. The advertising is a below-the-content revenue source on a demo, not a behavioural-targeting apparatus. That narrows the exposure — but it does not remove it, and the estate refuses to claim it does.
 
 # Why the slots keep two absolutes unremedied
 

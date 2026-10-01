@@ -44,7 +44,7 @@ All three relational harms remove a condition of fair dealing rather than injuri
 
 # The worked instance — the estate's minimisation posture
 
-The estate applies this stratum to itself with a mixed result. It carries no third-party analytics and stores no learner behavioural data, which discharges HX-05's minimisation duty structurally. Its credential and appeals machinery — MX-016, under which appeals are decided by someone other than the party appealed against — discharges HX-06's process duty. But HX-04 remains unremedied for as long as the ad slots imply an advertising relationship, and the estate's statement says so rather than claiming the minimisation posture cures it.
+The estate applies this stratum to itself with a mixed result. It stores no learner behavioural data of its own, and its one third-party analytics tag (Google Analytics 4, disclosed on the privacy page) is used for aggregate traffic measurement only — which narrows, but no longer structurally discharges, HX-05's minimisation duty. Its credential and appeals machinery — MX-016, under which appeals are decided by someone other than the party appealed against — discharges HX-06's process duty. But HX-04 remains unremedied for as long as the ad slots imply an advertising relationship, and the estate's statement says so rather than claiming the minimisation posture cures it.
 
 # Limits of this stratum
 

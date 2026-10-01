@@ -72,10 +72,18 @@
 
   function setMeta(title, desc, canonical) {
     document.title = title + " · MetaX.Academy";
-    var d = document.getElementById("metaDesc"); if (d) d.setAttribute("content", desc);
-    var od = document.getElementById("ogDesc"); if (od) od.setAttribute("content", desc);
-    var ot = document.getElementById("ogTitle"); if (ot) ot.setAttribute("content", title + " · MetaX.Academy");
-    var c = document.getElementById("metaCanonical"); if (c) c.setAttribute("href", canonical);
+    function set(sel, attr, val) { var n = document.querySelector(sel); if (n) n.setAttribute(attr, val); }
+    set("#metaDesc", "content", desc);
+    set("#ogDesc", "content", desc);
+    set("#twDesc", "content", desc);
+    set("#ogTitle", "content", title + " · MetaX.Academy");
+    set("#twTitle", "content", title + " · MetaX.Academy");
+    set("#ogUrl", "content", canonical);
+    /* Static <head> carries no canonical for this template (tools/seo-head.js);
+       the resolved, redirect-free URL is declared here. */
+    var c = document.querySelector('link[rel="canonical"]');
+    if (!c) { c = document.createElement("link"); c.rel = "canonical"; document.head.appendChild(c); }
+    c.setAttribute("href", canonical);
   }
 
   var type = (q("type") || "series").toLowerCase();
@@ -87,7 +95,8 @@
   var backEl = document.getElementById("backLink");
 
   function notFound() {
-    setMeta("Not found", "The requested item could not be found.", "https://metax.academy/detail.html");
+    setMeta("Not found", "The requested item could not be found.", "https://metax.academy/detail");
+    var rb = document.querySelector('meta[name="robots"]'); if (rb) rb.setAttribute("content", "noindex, follow");
     heroEl.innerHTML = '<div class="d-code">MetaX.Academy</div><h1>Item not found</h1>';
     bodyEl.innerHTML = '<p>We couldn\u2019t find that item. It may have moved.</p>';
     navEl.innerHTML = '<a class="btn btn-primary" href="index.html">Back to MetaX \u2192</a>';
@@ -101,7 +110,7 @@
     var idx = "DET-S-" + s.n;
     setMeta("Series " + s.n + " — " + s.title,
       s.sub + " · " + s.territory + ". Part of the MetaX TopTech next-level stack.",
-      "https://metax.academy/detail.html?type=series&id=" + s.n);
+      "https://metax.academy/detail?type=series&id=" + s.n);
     backEl.href = "curriculum.html"; backEl.textContent = "\u2190 Full Curriculum";
 
     heroEl.innerHTML = landingHero({
@@ -147,7 +156,7 @@
     if (!f) return notFound();
     var idx = "DET-FG-" + (f.code || f.id);
     setMeta("Flagship " + f.code + " — " + f.title, f.tagline + ". " + f.territory,
-      "https://metax.academy/detail.html?type=flagship&id=" + f.id);
+      "https://metax.academy/detail?type=flagship&id=" + f.id);
     backEl.href = "toptech.html#flagships-sec"; backEl.textContent = "\u2190 Flagships";
 
     heroEl.innerHTML = landingHero({
@@ -187,7 +196,7 @@
     if (!p) return notFound();
     var idx = "DET-M-" + p.code;
     setMeta(p.code + " — " + p.en, p.en + ". A Meta-X program under MacroLifeTach.",
-      "https://metax.academy/detail.html?type=program&id=" + p.code);
+      "https://metax.academy/detail?type=program&id=" + p.code);
     backEl.href = "macrolifetach.html#programs"; backEl.textContent = "\u2190 The Nine Programs";
 
     heroEl.innerHTML = landingHero({

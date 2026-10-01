@@ -33,7 +33,7 @@ The instruments in State of the Build are the concrete form of the estate's DNA.
 
 ## The worked frame — the demo notice
 
-The demo notice is About's clearest instance of the estate's own standard. Rather than a generic "under construction" banner, it separates three categories explicitly: what is real (the design system, the routing law, the License and its register, the navigation truth), what is scaffolding (unreviewed prose marked scaffold, placeholder counts, the planned pillars), and what is deliberately absent (behavioural advertising, third-party analytics, any companion surface). A visitor leaves the demo notice knowing precisely how much weight to put on each page — which is the honest alternative to a site that hides its incompleteness behind polish.
+The demo notice is About's clearest instance of the estate's own standard. Rather than a generic "under construction" banner, it separates three categories explicitly: what is real (the design system, the routing law, the License and its register, the navigation truth), what is scaffolding (unreviewed prose marked scaffold, placeholder counts, the planned pillars), what is deliberately absent (behavioural advertising, any companion surface), and the one disclosed exception — a Google Analytics 4 tag used for aggregate traffic measurement. A visitor leaves the demo notice knowing precisely how much weight to put on each page — which is the honest alternative to a site that hides its incompleteness behind polish.
 
 ## Limits of this pillar
 

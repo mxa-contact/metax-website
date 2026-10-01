@@ -40,10 +40,18 @@
 
   function setMeta(title, desc, canonical) {
     document.title = title + " · MetaX.Academy News";
-    var d = document.getElementById("metaDesc"); if (d) d.setAttribute("content", desc);
-    var od = document.getElementById("ogDesc"); if (od) od.setAttribute("content", desc);
-    var ot = document.getElementById("ogTitle"); if (ot) ot.setAttribute("content", title + " · MetaX.Academy");
-    var c = document.getElementById("metaCanonical"); if (c) c.setAttribute("href", canonical);
+    function set(sel, attr, val) { var n = document.querySelector(sel); if (n) n.setAttribute(attr, val); }
+    set("#metaDesc", "content", desc);
+    set("#ogDesc", "content", desc);
+    set("#twDesc", "content", desc);
+    set("#ogTitle", "content", title + " · MetaX.Academy");
+    set("#twTitle", "content", title + " · MetaX.Academy");
+    set("#ogUrl", "content", canonical);
+    /* Static <head> carries no canonical for this template (tools/seo-head.js);
+       the resolved, redirect-free URL is declared here. */
+    var c = document.querySelector('link[rel="canonical"]');
+    if (!c) { c = document.createElement("link"); c.rel = "canonical"; document.head.appendChild(c); }
+    c.setAttribute("href", canonical);
   }
 
   /* ---------- Tiny, safe Markdown parser ----------
@@ -172,13 +180,14 @@
   var tagsEl = document.getElementById("artTags");
 
   if (!post) {
-    setMeta("Article not found", "This article could not be found.", "https://metax.academy/news.html");
+    setMeta("Article not found", "This article could not be found.", "https://metax.academy/news");
+    var rb = document.querySelector('meta[name="robots"]'); if (rb) rb.setAttribute("content", "noindex, follow");
     if (headEl) headEl.innerHTML = '<span class="art-cat">News</span><h1>Article not found</h1>';
     if (bodyEl) bodyEl.innerHTML = '<p>We couldn\u2019t find that article. <a href="news.html">Back to Academy News \u2192</a></p>';
     return;
   }
 
-  setMeta(post.title, post.excerpt, "https://metax.academy/article.html?id=" + post.slug);
+  setMeta(post.title, post.excerpt, "https://metax.academy/article?id=" + post.slug);
 
   if (heroEl) { heroEl.innerHTML = imgSlot(post.img, post.imgIndex, catGlyph(post.category)); hydrate(heroEl); }
   if (headEl) {
